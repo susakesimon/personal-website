@@ -35,30 +35,39 @@ const services = [
 ];
 
 const Services = () => {
-  return (
-    <section id="services" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-16">Services</h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="p-6 border rounded-xl hover:shadow-lg transition-shadow group"
-            >
-              <div className="w-12 h-12 bg-[#990000]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#990000] transition-colors">
-                <div className="text-[#990000] group-hover:text-white transition-colors">
-                  {service.icon}
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+	return (
+		<section
+			id="services"
+			className="py-20 bg-white dark:bg-gray-900 transition-colors"
+		>
+			<div className="container mx-auto px-4">
+				<h2 className="text-3xl font-bold text-center mb-16 dark:text-white">
+					Services
+				</h2>
+
+				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					{services.map((service) => (
+						<div
+							key={service.title}
+							className="p-6 border dark:border-gray-700 rounded-xl hover:shadow-lg transition-shadow group dark:bg-gray-800"
+						>
+							<div className="w-12 h-12 bg-[#990000]/10 dark:bg-[#990000]/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#990000] transition-colors">
+								<div className="text-[#990000] group-hover:text-white transition-colors">
+									{service.icon}
+								</div>
+							</div>
+							<h3 className="text-xl font-semibold mb-2 dark:text-white">
+								{service.title}
+							</h3>
+							<p className="text-gray-600 dark:text-gray-300">
+								{service.description}
+							</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default Services;

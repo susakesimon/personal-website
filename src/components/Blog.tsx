@@ -33,18 +33,23 @@ const posts = [
 
 const Blog = () => {
 	return (
-		<section id="blog" className="py-20 bg-gray-50">
+		<section
+			id="blog"
+			className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors"
+		>
 			<div className="container mx-auto px-4">
-				<h2 className="text-3xl font-bold text-center mb-4">Latest Posts</h2>
-				<p className="text-gray-600 text-center mb-16">
-					Articles are still in the works. Check back soon!
+				<h2 className="text-3xl font-bold text-center mb-4 dark:text-white">
+					Latest Posts
+				</h2>
+				<p className="text-gray-600 dark:text-gray-300 text-center mb-16">
+					Articles are currently being written. Check back soon!
 				</p>
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{posts.map((post) => (
 						<article
 							key={post.title}
-							className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow relative"
+							className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition-shadow relative"
 						>
 							<div className="absolute top-4 right-4 z-10">
 								<span className="bg-gray-900/80 text-white px-3 py-1 rounded-full text-sm">
@@ -63,12 +68,16 @@ const Blog = () => {
 									<span className="text-[#990000] text-sm font-medium">
 										{post.category}
 									</span>
-									<span className="text-gray-500 text-sm italic">
+									<span className="text-gray-500 dark:text-gray-400 text-sm italic">
 										{post.date}
 									</span>
 								</div>
-								<h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-								<p className="text-gray-600 mb-4">{post.excerpt}</p>
+								<h3 className="text-xl font-semibold mb-2 dark:text-white">
+									{post.title}
+								</h3>
+								<p className="text-gray-600 dark:text-gray-300 mb-4">
+									{post.excerpt}
+								</p>
 								<span className="text-[#990000] font-medium cursor-not-allowed opacity-70">
 									Coming Soon →
 								</span>

@@ -10,7 +10,7 @@ const images = [
 
 const Hero = () => {
 	return (
-		<section className="min-h-screen pt-20 flex items-center bg-gray-50">
+		<section className="min-h-screen pt-20 flex items-center bg-gray-50 dark:bg-gray-900 transition-colors">
 			<div className="container mx-auto px-4 py-20">
 				<div className="grid md:grid-cols-2 gap-12 items-center">
 					<motion.div
@@ -18,13 +18,13 @@ const Hero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
 					>
-						<h1 className="text-5xl font-bold text-gray-900 mb-4">
+						<h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
 							Hi, I'm Simon Solomon
 						</h1>
-						<h2 className="text-xl text-gray-600 mb-6">
+						<h2 className="text-xl text-gray-600 dark:text-gray-300 mb-6">
 							Computer Engineering & CS @ USC | UK Born | Portland Based
 						</h2>
-						<p className="text-gray-600 mb-8">
+						<p className="text-gray-600 dark:text-gray-400 mb-8">
 							Bridging technology and community through innovative solutions and
 							creative expression.
 						</p>
@@ -37,7 +37,7 @@ const Hero = () => {
 							</a>
 							<a
 								href="#portfolio"
-								className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+								className="border border-gray-300 dark:border-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors dark:text-white"
 							>
 								View Portfolio
 							</a>

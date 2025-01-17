@@ -29,9 +29,14 @@ const projects = [
 
 const Portfolio = () => {
 	return (
-		<section id="portfolio" className="py-20 bg-gray-50">
+		<section
+			id="portfolio"
+			className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors"
+		>
 			<div className="container mx-auto px-4">
-				<h2 className="text-3xl font-bold text-center mb-16">Portfolio</h2>
+				<h2 className="text-3xl font-bold text-center mb-16 dark:text-white">
+					Portfolio
+				</h2>
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
 					{projects.map((project) => (
@@ -48,7 +53,7 @@ const Portfolio = () => {
 								className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
 							/>
 							<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-								<span className="text-[#990000] bg-white px-3 py-1 rounded-full text-sm inline-block mb-2 w-fit">
+								<span className="text-[#990000] bg-white dark:bg-gray-900 px-3 py-1 rounded-full text-sm inline-block mb-2 w-fit">
 									{project.category}
 								</span>
 								<h3 className="text-white text-xl font-semibold">

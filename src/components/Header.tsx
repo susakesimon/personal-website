@@ -13,7 +13,7 @@ const Header = () => {
 	];
 
 	return (
-		<header className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+		<header className="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-100 dark:border-gray-800 transition-colors">
 			<nav className="container mx-auto px-4 py-4">
 				<div className="flex items-center justify-between">
 					<a href="#" className="flex items-center space-x-3">
@@ -31,7 +31,7 @@ const Header = () => {
 							<a
 								key={item.name}
 								href={item.href}
-								className="text-gray-600 hover:text-[#990000] transition-colors"
+								className="text-gray-600 dark:text-gray-300 hover:text-[#990000] dark:hover:text-[#990000] transition-colors"
 							>
 								{item.name}
 							</a>
@@ -41,7 +41,7 @@ const Header = () => {
 					{/* Mobile menu button */}
 					<button
 						onClick={() => setIsOpen(!isOpen)}
-						className="md:hidden text-gray-600"
+						className="md:hidden text-gray-600 dark:text-gray-300"
 					>
 						{isOpen ? <X size={24} /> : <Menu size={24} />}
 					</button>
@@ -49,13 +49,13 @@ const Header = () => {
 
 				{/* Mobile Navigation */}
 				{isOpen && (
-					<div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100">
+					<div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
 						<div className="px-4 py-2 space-y-2">
 							{navigation.map((item) => (
 								<a
 									key={item.name}
 									href={item.href}
-									className="block py-2 text-gray-600 hover:text-[#990000]"
+									className="block py-2 text-gray-600 dark:text-gray-300 hover:text-[#990000] dark:hover:text-[#990000]"
 									onClick={() => setIsOpen(false)}
 								>
 									{item.name}
